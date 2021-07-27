@@ -59,16 +59,12 @@ button {
   place-items: center;
 }
 
-button:hover {
+.btn--hover {
   background-color: #2e2e2e;
 }
 
 button[data-equals] {
   background-color: #2e2e2e;
-}
-
-button[data-equals]:hover {
-  background-color: #046b9f;
 }
 
 button.dot-radius {

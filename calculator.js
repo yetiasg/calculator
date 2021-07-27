@@ -14,10 +14,41 @@ class Calculator {
     this.previousTextElement = previousTextElement;
     this.currentTextElement = currentTextElement;
 
-    this.clear();
+    // this.clear();
   }
 
-  clear() {}
+  clear() {
+    this.previousTextElement.innerHTML = '';
+    this.currentTextElement.innerHTML = '0';
+  }
+
+  clearAll() {}
+
+  delete() {}
+
+  fetchNumber(number) {
+    console.log(Number(number));
+  }
+
+  chooseOperation(operation) {
+    console.log(operation);
+  }
+
+  compute() {}
+
+  updateOutput() {}
 }
 
 const calculator = new Calculator(previousTextElement, currentTextElement);
+
+numberBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    calculator.fetchNumber(btn.innerText);
+  });
+});
+
+operationBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    calculator.chooseOperation(btn.innerText);
+  });
+});

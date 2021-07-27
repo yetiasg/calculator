@@ -15,16 +15,18 @@ body {
 .calculator {
   position: relative;
   display: grid;
-  width: 20rem;
+  width: auto;
   background-color: #046b9f;
   border-radius: 10px;
   color: white;
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
+  grid-template-columns: repeat(4, calc(20rem / 3));
+  grid-template-rows: minmax(120px, auto) repeat(5, calc(20rem / 3.2));
 }
 
 .output {
   height: auto;
-  grid-column: span 3;
+  grid-column: span 4;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,8 +53,6 @@ button {
   font-size: 20px;
   border: none;
   display: grid;
-  width: calc(20rem / 3);
-  height: calc(20rem / 5);
   place-items: center;
 }
 
@@ -74,4 +74,8 @@ button.dot-radius {
 
 button.equals-radius {
   border-radius: 0 0 10px 0;
+}
+
+button.double-width {
+  grid-column: span 2;
 }

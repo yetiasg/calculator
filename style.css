@@ -9,15 +9,69 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .calculator {
-  height: 40rem;
-  background-color: violet;
+  position: relative;
+  display: grid;
+  width: 20rem;
+  background-color: #046b9f;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
 }
 
 .output {
-  background-color: white;
-  width: 20rem;
-  height: 10rem;
+  height: auto;
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 15px;
+  text-align: right;
+}
+
+.output > div:first-child {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.output > div:last-child {
+  margin: 10px 0 0;
+  font-size: 25px;
+}
+
+button {
+  background-color: #373737;
+  color: white;
+  font-size: 20px;
+  border: none;
+  display: grid;
+  width: calc(20rem / 3);
+  height: calc(20rem / 5);
+  place-items: center;
+}
+
+button:hover {
+  background-color: #2e2e2e;
+}
+
+button[data-equals] {
+  background-color: #2e2e2e;
+}
+
+button[data-equals]:hover {
+  background-color: #046b9f;
+}
+
+button.dot-radius {
+  border-radius: 0 0 0 10px;
+}
+
+button.equals-radius {
+  border-radius: 0 0 10px 0;
 }

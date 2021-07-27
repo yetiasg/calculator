@@ -4,5 +4,20 @@
 }
 
 body {
-  background-color: rgba(4, 107, 159, 0.92);
+  height: 100vh;
+  background-color: #fff7d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  height: 40rem;
+  background-color: violet;
+}
+
+.output {
+  background-color: white;
+  width: 20rem;
+  height: 10rem;
 }
